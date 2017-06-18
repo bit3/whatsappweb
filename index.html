@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>WhatsApp!Web</title>
+        <link href="https://fonts.googleapis.com/css?family=Overpass:100,400" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+    <script>
+        const {ipcRenderer} = require('electron');
+    </script>
+    
+    <header>
+        <h1>WhatsApp!Web</h1>
+    </header>
+    
+    <main>
+        <p>
+            This is an inofficial WhatsApp Desktop Client build with <a href="https://electron.atom.io/" target="_blank">Electron</a>.
+            This software is licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license</a>.
+        </p>
+        
+        <blockquote id="license"><script>document.write(ipcRenderer.sendSync('get-license'))</script></blockquote>
+        
+        <blockquote id="attribution">The <a href="https://www.iconfinder.com/icons/1961289/social_media_icons_whatsapp_icon#size=128" target="_blank">application icon</a> was created by <a href="https://www.iconfinder.com/Aarthi" target="_blank">Aarthi Padmanabhan</a> and licensed under the <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC-BY 3.0 license</a>.</blockquote>
+        
+        <p class="buttons">
+            <button>Accept and start</button>
+        </p>
+    </main>
+
+    <footer>
+        WhatsApp!Web Version <em><script>document.write(ipcRenderer.sendSync('determine-version'))</script></em><br/>
+        Node Version <em><script>document.write(process.versions.node)</script></em><br/>
+        Chrome Version <em><script>document.write(process.versions.chrome)</script></em><br/>
+        Electron Version <em><script>document.write(process.versions.electron)</script></em><br/>
+    </footer>
+    
+    <script>
+        document.querySelector('button').addEventListener('click', () => {
+            ipcRenderer.send('accept');
+        });
+    </script>
+    </body>
+</html>

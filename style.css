@@ -1,0 +1,100 @@
+body {
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Overpass', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+header {
+    margin: 0;
+    padding: 12px;
+    background: #1a805d;
+    
+    color: #fff;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    
+    font-size: 24px;
+    font-weight: 100;
+}
+
+main {
+    flex-grow: 1;
+    padding: 12px 0;    
+}
+
+p {
+    margin: 0;
+    padding: 0 12px;
+}
+
+blockquote {
+    position: relative;
+    margin: 12px 0 0;
+    padding: 12px 24px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #1a805d;
+    
+    white-space: pre-line;
+}
+
+blockquote:before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 6px;
+    
+    border-radius: 0 0 0 6px;
+    background: #1a805d;
+    color: #fff;
+    line-height: 1;
+}
+
+#license:before {
+    content: "License";
+}
+
+#attribution:before {
+    content: "Attribution";
+}
+
+.buttons {
+    padding: 24px 0 12px;
+    
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #1a805d;
+    
+    text-align: center;
+}
+
+button {
+    -webkit-appearance: none;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    background: #1a805d;
+    color: #fff;
+    cursor: pointer;
+}
+
+footer {
+    padding: 12px 0;
+    background: #1a805d;
+    color: #fff;
+    text-align: center;
+    font-size: 10px;
+}
+

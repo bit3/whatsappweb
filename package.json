@@ -1,0 +1,39 @@
+{
+  "name": "WhatsAppWeb",
+  "description": "Inofficial WhatsApp Desktop Client",
+  "homepage": "https://github.com/bit3/whatsappweb",
+  "license": "MIT",
+  "author": { 
+    "name" : "Tristan Lins", 
+    "email" : "tristan@lins.io",
+    "url" : "http://tristan.lins.io/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bit3/whatsappweb.git"
+  },
+  "version": "1.0.0-alpha",
+  "main": "main.js",
+  "dependencies": {
+    "electron-settings": "^3.1.1"
+  },
+  "scripts": {
+    "run": "electron .",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "build": {
+    "appId": "io.bit3.whatsappweb",
+    "productName": "WhatsApp!Web",
+    "linux": {
+      "target": "snap",
+      "icon": "icon" 
+    },
+    "snap": {
+      "grade": "devel"
+    }
+  },
+  "devDependencies": {
+    "electron-builder": "^19.4.2"
+  }
+}
